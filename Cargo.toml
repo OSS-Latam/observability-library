@@ -6,8 +6,14 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
 anyhow = "1.0.86"
-arrow = "52.1.0"
+arrow = { version = "53.1.0", features = ["ipc","pyarrow"] }
 datafusion = "41.0.0"
 tokio = "1.38.0"
 thiserror = "1.0.63"
+pyo3-arrow = "0.5.0"
+pyo3 = { version = "0.22.0", features = ["extension-module"] }
+[lib]
+name = "metrics"
+crate-type = ["cdylib"]

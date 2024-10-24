@@ -163,7 +163,7 @@ impl BuiltInMetricsBuilder {
 }
 
 // Define the Transformation struct to hold the list of Instructions
-#[derive(Debug, PartialEq, Default)]
+#[derive(Debug, PartialEq, Default, Clone)]
 pub struct Transformation {
     pub instructions: Vec<Instruction>,
 }
